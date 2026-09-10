@@ -1,0 +1,11 @@
+/*******************************************************************************
+    Original authors: Jakob Wapenhensch (Jak0bW) and Pascal Gilcher / Marty McFly
+    Modifications by: Vortigern
+
+    License:
+    Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+    https://creativecommons.org/licenses/by-nc/4.0/
+
+    Links to projects this was based on:
+    https://github.com/JakobPCoder/ReshadeMotionEstimation
+    https://gist.github.com/martymcmodding/69c775f844124ec2c71c37541801c053
