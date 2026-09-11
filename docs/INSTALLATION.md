@@ -1,6 +1,6 @@
 # Installation
 
-**The version 1.0 download is coming soon.** These instructions describe the drop-in add-on. Its controls are in ReShade's menu.
+**[Download version 1.0](https://github.com/EinarEB/ETS2-VR-DLAA-DLSS-4.5/releases/tag/v1.0).** These instructions describe the drop-in add-on. Its controls are in ReShade's menu.
 
 Required NVIDIA library: **`nvngx_dlss.dll` 310.9.1.0**. Default preset: **M**. Mode: **native-resolution DLAA**.
 
@@ -20,7 +20,7 @@ A desktop-only ReShade installation does not enable the VR effect. The **full ad
 
 ## 3. Add DLAA
 
-Close the game. Once version 1.0 is available, extract these two files beside `eurotrucks2.exe` in `bin\win_x64`:
+Close the game. Extract `ETS2-VR-DLAA-1.0.zip`, then place the following two files beside `eurotrucks2.exe` in `bin\win_x64`. The NVIDIA DLL is a separate download:
 
 - `ets2-dlaa.addon64` — this project's add-on.
 - `nvngx_dlss.dll` — download **310.9.1.0** from [NVIDIA's official repository](https://raw.githubusercontent.com/NVIDIA/DLSS/374959484e79a640feaba44c93ac8cfb0a03f5b5/lib/Windows_x86_64/rel/nvngx_dlss.dll). Check **Properties → Details → File version** after saving it. This link is pinned to the required release, rather than whichever version is newest.
@@ -46,24 +46,27 @@ Close the game before editing its configuration. Leave unrelated settings alone.
 
 ## 5. Enable DLAA
 
-Start ETS2 through Steam and enter the driving scene. Press **Home** while the **desktop game window** has focus to open ReShade. Complete ReShade's first-run tutorial if shown.
+Start ETS2 through Steam and enter the driving scene. Press **Home** while the **desktop game window** has focus to open ReShade. Select the **Add-ons** tab and expand **ETS2 VR DLAA — DLSS 4.5**.
 
-1. Enable the checkbox beside **ETS2 DLAA** in the effects list.
-2. Select the effect to display **Model preset** and start with **M**.
+1. Check **Enable DLAA**.
+2. Choose **Model preset** and start with **M**.
 3. Close the ReShade overlay and allow a few seconds for the temporal image to settle.
 
-With VDXR, use the desktop game window for these controls; they apply to the headset scene. Unchecking the effect returns to the original image. ReShade remembers the checkbox and preset in its active preset file; an existing saved-off setting stays off.
+With VDXR, use the desktop game window for these controls; they apply to the headset scene. Unchecking **Enable DLAA** returns to the original image. The add-on saves both settings in its own `ETS2_DLAA` section of `ReShade.ini`, independently of shader presets. A fresh installation starts off with M selected; your saved setting is restored on subsequent launches.
+
+The selector remains available with DLAA disabled and with ReShade's **Performance Mode** enabled. The internal DLAA and motion effects are hidden from Home. ReShade's global effects switch still pauses processing; the add-on does not override it.
 
 **M**, **L** and **K** are model requests, not resolution or performance modes. M and L use DLSS 4.5 models; K uses the earlier DLSS 4 model. If M/L are too expensive on an RTX 20- or 30-series card, try K: [NVIDIA notes their higher cost on those GPUs](https://www.nvidia.com/en-us/geforce/news/dlss-4-5-super-resolution-available-now/).
 
-A change resets the DLAA history. The NVIDIA driver may override a request, and this add-on cannot independently report the effective preset. Leave driver DLSS overrides at their defaults for predictable comparisons. Turn off ReShade's **Performance Mode** while editing the preset selector if the controls are hidden.
+A change resets the DLAA history. The NVIDIA driver may override a request, and this add-on cannot independently report the effective preset. Leave driver DLSS overrides at their defaults for predictable comparisons.
 
 ## Troubleshooting
 
 | Symptom | Check |
 | --- | --- |
 | No ReShade overlay | Focus the desktop game window and press Home. Confirm ReShade was installed for the correct `eurotrucks2.exe` with OpenXR selected. |
-| ReShade opens, but ETS2 DLAA is missing | Use ReShade **6.8.0 with full add-on support**. Put the add-on beside the 64-bit game executable, keep its filename unchanged, and restart the game. Check ReShade's **Add-ons** tab for a load error. If you customized ReShade's **Add-on search path**, put the add-on in that folder instead; NVIDIA's DLL still goes beside the game EXE. |
+| DLAA controls are missing | Open **Add-ons** and expand **ETS2 VR DLAA — DLSS 4.5**. Its internal effects are intentionally hidden from Home. Use the release add-on and restart ETS2 after replacing it. |
+| The add-on is missing from Add-ons | Use ReShade **6.8.0 with full add-on support**. Put the add-on beside the 64-bit game executable, keep its filename unchanged, and restart the game. Check the ReShade log for a load error. If you customized ReShade's **Add-on search path**, put the add-on in that folder instead; NVIDIA's DLL still goes beside the game EXE. |
 | The checkbox is on but the VR scene is unchanged | Enter the driving scene and wait a few seconds. Confirm the game is using OpenXR/DX11 and a supported game build. Check `ets2-dlaa.log` for the specific error. After fixing a processing error, **restart ETS2**; toggling the checkbox alone does not clear it. |
 | Missing or wrong DLSS library | Put `nvngx_dlss.dll` **310.9.1.0** beside `eurotrucks2.exe`, then restart. A DLL left inside a ZIP, in the parent game directory or with another version will not work. |
 | Blur, trails or unexpected edges | Turn off the game's own AA and any other injected AA/upscaler; use native scaling and default NVIDIA overrides. Compare M and K after allowing the image to settle. If it persists, report whether it occurs while stationary or moving and in one or both eyes. |
@@ -74,7 +77,7 @@ For an issue, include **`ets2-dlaa.log`** from the folder containing the add-on 
 
 ## Updating
 
-Close ETS2 and replace `ets2-dlaa.addon64` with the newer release. Keep your ReShade preset. Change the NVIDIA DLL only when the release specifies a different required version. The add-on manages its versioned shader cache automatically.
+Close ETS2 and replace `ets2-dlaa.addon64` with the newer release. Keep `ReShade.ini` to preserve your add-on settings. Change the NVIDIA DLL only when the release specifies a different required version. The add-on manages its versioned shader cache automatically.
 
 ## Removing
 
@@ -82,5 +85,7 @@ Close ETS2 and replace `ets2-dlaa.addon64` with the newer release. Keep your ReS
 2. Delete `%LOCALAPPDATA%\ETS2-DLAA` to remove the add-on's cached shaders. This prevents ReShade from continuing to load those effects after the add-on is gone.
 3. Remove only the `ETS2-DLAA\assets\...` entries from ReShade's effect/texture search paths. Leave other paths and shader folders intact.
 4. Remove `nvngx_dlss.dll` only if no other mod uses it.
+
+You can also remove the add-on's `ETS2_DLAA` section from `ReShade.ini`; leave other sections intact.
 
 ReShade can remain installed for other effects. Use its setup program if you also want to uninstall ReShade.

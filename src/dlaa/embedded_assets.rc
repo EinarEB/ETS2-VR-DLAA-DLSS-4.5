@@ -1,0 +1,8 @@
+// SPDX-License-Identifier: MIT
+// Build from the repository root (rc /I .). Contents are consumed at build time.
+// Keep resource IDs in sync with embedded_assets.cpp.
+45101 RCDATA "shaders\\ETS2_DLAA.fx"
+45102 RCDATA "shaders\\ETS2_VortStereo.fx"
+45103 RCDATA "shaders\\ETS2_VortStereo_Eye.fxh"
+45104 RCDATA "shaders\\ReShade.fxh"
+45105 RCDATA "shaders\\vort_BlueNoise.png"

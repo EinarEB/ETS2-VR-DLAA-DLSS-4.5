@@ -1,0 +1,518 @@
+{
+  "external_prerequisites": [
+    "Windows x64 SDK",
+    "MSVC C++20 compiler and resource compiler",
+    "NVIDIA driver NGX core at runtime",
+    "User-supplied ReShade add-on runtime at runtime",
+    "User-supplied nvngx_dlss.dll file version 310.9.1.0 at runtime"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "kind": "build",
+      "bytes": 71,
+      "sha256": "3fae160bc79de20b6b261644f86f96a2652d7c43bc173f202729c0f37d869547"
+    },
+    {
+      "path": ".gitignore",
+      "kind": "build",
+      "bytes": 29,
+      "sha256": "c5948137d755c552e76f896cb09172908128d9c37b0c94ce87897d5040c4619b"
+    },
+    {
+      "path": "LICENSE",
+      "kind": "license",
+      "bytes": 1428,
+      "sha256": "864b6447b35daee8bf4c3c4fc3dafde564a2cde2be4ddc03a356ae406a8c49af"
+    },
+    {
+      "path": "README.md",
+      "kind": "documentation",
+      "bytes": 4010,
+      "sha256": "aa80990c560f180684ac2b37642bbe7d2221dcead2bd66c686e787437b4a6d34"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "kind": "documentation",
+      "bytes": 2051,
+      "sha256": "398a1634665660d964617107733f231fb7b225065dfbf8fca6d1e256ba4ee1c0"
+    },
+    {
+      "path": "build-dlaa.cmd",
+      "kind": "build",
+      "bytes": 1540,
+      "sha256": "19887cabcdaf0bc865520f15895a0e84d09e0ad0bd1021a808a29907e81f1bc5"
+    },
+    {
+      "path": "docs/BUILDING.md",
+      "kind": "documentation",
+      "bytes": 2198,
+      "sha256": "aaa40a6e596a5f0691b25a068974d627f461b5ede1538c1391f07ae2639fdbd5"
+    },
+    {
+      "path": "docs/INSTALLATION.md",
+      "kind": "documentation",
+      "bytes": 8089,
+      "sha256": "61b4a57d664e34ae65224662c43cb77ac50ddba60f8bcf26e40da7e4192b4002"
+    },
+    {
+      "path": "external/imgui/imconfig.h",
+      "kind": "source",
+      "bytes": 12289,
+      "sha256": "fb8e32b9af9aa7dad5ec5c5bc862537f5624cb39a814e6d3b36b4629a50b6599"
+    },
+    {
+      "path": "external/imgui/imgui.h",
+      "kind": "source",
+      "bytes": 454459,
+      "sha256": "2ca314d19c7e1ea85687a9c1e37079e0cc823939a551b3e6b2453ff0af9fbf13"
+    },
+    {
+      "path": "external/reshade/include/reshade.hpp",
+      "kind": "source",
+      "bytes": 19843,
+      "sha256": "d86932721cb77e47b996da6bf3861b1a938a1bc843be04d1e0c5dd09133b7f43"
+    },
+    {
+      "path": "external/reshade/include/reshade_api.hpp",
+      "kind": "source",
+      "bytes": 58876,
+      "sha256": "db19051ef285a7a1a3721f2711de973be8805d4ca39a38fbadade7fd22100a17"
+    },
+    {
+      "path": "external/reshade/include/reshade_api_device.hpp",
+      "kind": "source",
+      "bytes": 89369,
+      "sha256": "8492cb9a4352ab9a25140828226a411be36c480c23d53d0fcc806a0515076212"
+    },
+    {
+      "path": "external/reshade/include/reshade_api_format.hpp",
+      "kind": "source",
+      "bytes": 18738,
+      "sha256": "d5fcdf598a9adbd18db6ccd0d15133d08c4dfa4909ec8335f76edaf735ae39cf"
+    },
+    {
+      "path": "external/reshade/include/reshade_api_pipeline.hpp",
+      "kind": "source",
+      "bytes": 50915,
+      "sha256": "2c592013e46e72c62119c0652786ac21c6536a29a1bad30973a6069d1d7f7351"
+    },
+    {
+      "path": "external/reshade/include/reshade_api_resource.hpp",
+      "kind": "source",
+      "bytes": 29552,
+      "sha256": "cae6d40cbd37e314e5ce5fc2cd22e77d7042892284212972bd986ffabb96363e"
+    },
+    {
+      "path": "external/reshade/include/reshade_events.hpp",
+      "kind": "source",
+      "bytes": 126479,
+      "sha256": "5b1f8b8144589712584cc8f2e8b6cf7c2aff05fc1c570b7867cfa1ee841296b7"
+    },
+    {
+      "path": "external/reshade/include/reshade_overlay.hpp",
+      "kind": "source",
+      "bytes": 96000,
+      "sha256": "771f0cdde2dacd21cfe04664e1aaaddae43114a1abb51bb63af5645a88c217a6"
+    },
+    {
+      "path": "licenses/LICENSE-CC-BY-NC-4.0.txt",
+      "kind": "license",
+      "bytes": 17649,
+      "sha256": "cc97a2c4ff7723a1f25179dc7c18f676fa84191bbb36ea7d0061acaf3c102559"
+    },
+    {
+      "path": "licenses/LICENSE-CC0-1.0.txt",
+      "kind": "license",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "licenses/LICENSE-Feeder-MIT.txt",
+      "kind": "license",
+      "bytes": 1210,
+      "sha256": "1ce240e402901fb81eb82a60a6bafd2fb913cd5746860b0a4ec52a5acb49ced7"
+    },
+    {
+      "path": "licenses/LICENSE-ImGui-MIT.txt",
+      "kind": "license",
+      "bytes": 1104,
+      "sha256": "55e058cc5899e6077a819ad1005d6d1f4528f65ae100795c9692f9fa6525a8ce"
+    },
+    {
+      "path": "licenses/LICENSE-NIGos-Bridge-MIT.txt",
+      "kind": "license",
+      "bytes": 1083,
+      "sha256": "e9755305941ee76fdd77a520b6f402898907ceb64f6e2180bb262307ce5e0d33"
+    },
+    {
+      "path": "licenses/LICENSE-ReShade-BSD.txt",
+      "kind": "license",
+      "bytes": 1490,
+      "sha256": "d2bb5eb908e9aa7ac2f7f4cf6441d62e1f6ac1256cf22bb5289516c9f30e5f0a"
+    },
+    {
+      "path": "licenses/LICENSE-Vort-Shaders-MIT.txt",
+      "kind": "license",
+      "bytes": 1068,
+      "sha256": "800bacb0f9db4df8203f0dad1f99947109a44f4097380807e0483bd62dee0d41"
+    },
+    {
+      "path": "licenses/NOTICE-ReShade-API.txt",
+      "kind": "license",
+      "bytes": 78,
+      "sha256": "71accc9aeb6604d17d20f05e2810f0e4cf9fc4abcdbc6a4b404fa2b705334adf"
+    },
+    {
+      "path": "licenses/NOTICE-Vort-MotionVectors.txt",
+      "kind": "license",
+      "bytes": 518,
+      "sha256": "2bfbdbf8ea9f1c667f9a0ef4e030fc37ca5dfd67ad20e1b33f19363c8d8a9abe"
+    },
+    {
+      "path": "shaders/ETS2_DLAA.fx",
+      "kind": "asset",
+      "bytes": 11752,
+      "sha256": "f2d4e90b0c7b506c6a0b8a373451c530c4c8cf598a11693ca66663a096375635"
+    },
+    {
+      "path": "shaders/ETS2_VortStereo.fx",
+      "kind": "asset",
+      "bytes": 13861,
+      "sha256": "fda7097d7fed707f132770bf605701a41606faa07d120cac6e8c3be259958cf4"
+    },
+    {
+      "path": "shaders/ETS2_VortStereo_Eye.fxh",
+      "kind": "asset",
+      "bytes": 16138,
+      "sha256": "fd78e2de69b3cc5443baf40dae6f3c45f17f6df5026c3270c178ed45c1633fc6"
+    },
+    {
+      "path": "shaders/ReShade.fxh",
+      "kind": "asset",
+      "bytes": 4250,
+      "sha256": "6dabfbbaf968c3871905d2ea17f96572ff7b1cec01310b5d0e5252b66b30174f"
+    },
+    {
+      "path": "shaders/vort_BlueNoise.png",
+      "kind": "asset",
+      "bytes": 262548,
+      "sha256": "050d26db9283fbaece3b6883e300d22403631d83a12a5f2f79dc8b789b860305"
+    },
+    {
+      "path": "src/depth/depth_match.hpp",
+      "kind": "source",
+      "bytes": 29228,
+      "sha256": "c5144ee173b52189716b23a54baea0eaa696e2a79cf4010136d1938e5331d4a2"
+    },
+    {
+      "path": "src/depth/depth_match_addon.cpp",
+      "kind": "source",
+      "bytes": 39903,
+      "sha256": "a2ec235b37e03f00f5515d48ff269417d78a8f741af7bd4ed5d0e22778d891e8"
+    },
+    {
+      "path": "src/depth/ets2_depth_route.hpp",
+      "kind": "source",
+      "bytes": 43743,
+      "sha256": "85a56c7f3c43de72da02f1c3d3520bddfb840a4fee884c0de67f567501ae3e33"
+    },
+    {
+      "path": "src/depth/ets2_rain_depth.hpp",
+      "kind": "source",
+      "bytes": 2449,
+      "sha256": "ee20233e3cbf79c1292ffd6449054abf456bfcd5cc37df372d2992ca2730fefa"
+    },
+    {
+      "path": "src/depth/feed_d3d11_context.h",
+      "kind": "source",
+      "bytes": 2873,
+      "sha256": "c2410c2323647fd126f7f48f7e98cfc2275b2bb5448d568ad2d8d150842ac2f4"
+    },
+    {
+      "path": "src/depth/geometry_taa_probe.h",
+      "kind": "source",
+      "bytes": 48611,
+      "sha256": "e36eeb22c52209e148ad4ad51fa113cb9f45263c023247426a2b7ae39f8760cc"
+    },
+    {
+      "path": "src/depth/resolve_vs_metadata.h",
+      "kind": "source",
+      "bytes": 8546,
+      "sha256": "b2802d88615adc46f4138b5d8f6d194ddc09343c6ad396d99f2004d86c17491c"
+    },
+    {
+      "path": "src/depth/scene_r_color.h",
+      "kind": "source",
+      "bytes": 8864,
+      "sha256": "8318374285b1ba8995a2bfcc2cdf8b881d496c733b1514bafe46134259aa128c"
+    },
+    {
+      "path": "src/depth/scene_r_depth_contract.h",
+      "kind": "source",
+      "bytes": 4045,
+      "sha256": "cacce3327e260c261b56ebc749f24b09ba3773f77b57454b17c4b0fc1e923aec"
+    },
+    {
+      "path": "src/depth/scene_r_normalize.h",
+      "kind": "source",
+      "bytes": 25210,
+      "sha256": "8e99a632e6a54f4c0ffb07709b4aca889086e8bf6b40ce20d3c1cec79f5abd00"
+    },
+    {
+      "path": "src/depth/scene_r_pair.h",
+      "kind": "source",
+      "bytes": 10154,
+      "sha256": "3568734c969b9eb7c1acf0da4b8026009c06d67aa1963594e473389c0a4acba0"
+    },
+    {
+      "path": "src/depth/scene_r_pair_abi.h",
+      "kind": "source",
+      "bytes": 1898,
+      "sha256": "1d05aeb3d6c7f5ae0e67c30862131fa1738b0204af7ba50d5d3e185cd409cfd3"
+    },
+    {
+      "path": "src/depth/scene_r_publish_contract.h",
+      "kind": "source",
+      "bytes": 561,
+      "sha256": "839acdfe8529a6e8dc7449b7f0f4c585c17a2b8b13a6b86edd30526bb22c3f25"
+    },
+    {
+      "path": "src/dlaa/addon.cpp",
+      "kind": "source",
+      "bytes": 32582,
+      "sha256": "076512de69e08f9910e41b3234f080e1fb3148f036e06b29fa296c05182cfe6c"
+    },
+    {
+      "path": "src/dlaa/control_sync.cpp",
+      "kind": "source",
+      "bytes": 4006,
+      "sha256": "7cd8d95f061cc2273ea70a21ba31982ca269225733f1fb51dbdcf7a6c7d3a110"
+    },
+    {
+      "path": "src/dlaa/control_sync.h",
+      "kind": "source",
+      "bytes": 1674,
+      "sha256": "b45bafe7b64dbcca931a49a985a6292b90e37731c0b26af684c194af2a152279"
+    },
+    {
+      "path": "src/dlaa/embedded_assets.cpp",
+      "kind": "source",
+      "bytes": 18275,
+      "sha256": "62f8e6767b7f4319116238aa0e257efd162d487ec09ce618beac395b2bc3c5a9"
+    },
+    {
+      "path": "src/dlaa/embedded_assets.h",
+      "kind": "source",
+      "bytes": 1007,
+      "sha256": "9de76be43ce94bba111b9c1a222e4bf66cbbad8d0d859cf07690944855d5accd"
+    },
+    {
+      "path": "src/dlaa/embedded_assets.rc",
+      "kind": "resource",
+      "bytes": 376,
+      "sha256": "37c728f1e31015e79fe839ac4c4efd7fc11c975cf0e460babfadc2ecbca0395b"
+    },
+    {
+      "path": "src/dlaa/input_capture.h",
+      "kind": "source",
+      "bytes": 10489,
+      "sha256": "c49f666fb83f4920fc0b6641666974f7f742b6cc901e57041a09a1edc7242ed4"
+    },
+    {
+      "path": "src/dlaa/input_capture_schema.h",
+      "kind": "source",
+      "bytes": 8244,
+      "sha256": "9b0ea456cbbcf631fc4a6b4914e54c1e8e908b37f271eb0415c1bb23ba518e76"
+    },
+    {
+      "path": "src/dlaa/producer_control.h",
+      "kind": "source",
+      "bytes": 972,
+      "sha256": "71e8a3893746dd7a2852f4e3408d7d973a2f29948e079d95d2e7ae19faddc23d"
+    },
+    {
+      "path": "src/dlaa/settings_overlay.cpp",
+      "kind": "source",
+      "bytes": 8109,
+      "sha256": "31273988463cf728bd8c83449466d0d6162bd0c790177b33190d39d76810e5a5"
+    },
+    {
+      "path": "src/dlaa/settings_overlay.h",
+      "kind": "source",
+      "bytes": 1270,
+      "sha256": "30d311ca99255377dbbc46f599af5ef798161d91e1c42ac1f90b319b05b8e95e"
+    },
+    {
+      "path": "src/dlaa/version.rc",
+      "kind": "resource",
+      "bytes": 533,
+      "sha256": "97373fa4e3b73bcf89bba5471d38da8a1e9e6c3bfd1717368b7eca879c6171da"
+    },
+    {
+      "path": "src/feeder/feed_context_protection.h",
+      "kind": "source",
+      "bytes": 1953,
+      "sha256": "dc87ad98db643c048e9df7b686acd2718d25ff3bcb3b5791da9939df45159821"
+    },
+    {
+      "path": "src/feeder/feed_d3d11_context.h",
+      "kind": "source",
+      "bytes": 2873,
+      "sha256": "c2410c2323647fd126f7f48f7e98cfc2275b2bb5448d568ad2d8d150842ac2f4"
+    },
+    {
+      "path": "src/feeder/feed_driver_api.h",
+      "kind": "source",
+      "bytes": 5451,
+      "sha256": "60438a7c47b47fdef0a78f4c671847238b91776a353dbfec8529f3844dd4626a"
+    },
+    {
+      "path": "src/feeder/feed_post_sr.h",
+      "kind": "source",
+      "bytes": 35542,
+      "sha256": "ebc72c2942b1f0a0b3918f6c64a3cbc39ce58fb928c760c7450450e03e10569a"
+    },
+    {
+      "path": "src/feeder/feed_post_sr_model.h",
+      "kind": "source",
+      "bytes": 2487,
+      "sha256": "819fe35a635f1e9a9748065abd6c8a0769fee590df9803c391042055e69b7002"
+    },
+    {
+      "path": "src/feeder/feed_post_sr_settings.h",
+      "kind": "source",
+      "bytes": 8326,
+      "sha256": "342bd1598caa78f6f9a091e4d61f24a8afdcf507a274cbb06265b601f8e21302"
+    },
+    {
+      "path": "src/feeder/feed_scene_r_client.h",
+      "kind": "source",
+      "bytes": 15697,
+      "sha256": "77d65db1454dc6d88e835bcd8304da13b432973e727d239f973dde3f16a8900f"
+    },
+    {
+      "path": "src/feeder/feed_scene_r_pair_abi.h",
+      "kind": "source",
+      "bytes": 1898,
+      "sha256": "1d05aeb3d6c7f5ae0e67c30862131fa1738b0204af7ba50d5d3e185cd409cfd3"
+    },
+    {
+      "path": "src/feeder/stereo_motion_history.h",
+      "kind": "source",
+      "bytes": 1034,
+      "sha256": "3845e712c89e6230c457ab7f90c4844ea9b28f4a93729e398bd35f902c8b7cf8"
+    },
+    {
+      "path": "src/standalone/native_sr.cpp",
+      "kind": "source",
+      "bytes": 33613,
+      "sha256": "f373cb0293834a5448dba923e09ba71bf46670229e12d43e707f389ebd5e4b88"
+    },
+    {
+      "path": "src/standalone/native_sr.h",
+      "kind": "source",
+      "bytes": 2522,
+      "sha256": "849ead45abcf8b610ebdfabe3cf4b801bfd9103eb81719da745149577891b690"
+    }
+  ],
+  "license_allowlist": [
+    "LICENSE",
+    "licenses/LICENSE-CC-BY-NC-4.0.txt",
+    "licenses/LICENSE-CC0-1.0.txt",
+    "licenses/LICENSE-Feeder-MIT.txt",
+    "licenses/LICENSE-ImGui-MIT.txt",
+    "licenses/LICENSE-NIGos-Bridge-MIT.txt",
+    "licenses/LICENSE-ReShade-BSD.txt",
+    "licenses/LICENSE-Vort-Shaders-MIT.txt",
+    "licenses/NOTICE-ReShade-API.txt",
+    "licenses/NOTICE-Vort-MotionVectors.txt"
+  ],
+  "generated_metadata_allowlist": [
+    "source-manifest.json"
+  ],
+  "schema": 1,
+  "resource_allowlist": [
+    "src/dlaa/version.rc",
+    "src/dlaa/embedded_assets.rc"
+  ],
+  "source_allowlist": [
+    "external/reshade/include/reshade_api_device.hpp",
+    "external/reshade/include/reshade_api_format.hpp",
+    "external/reshade/include/reshade_api_pipeline.hpp",
+    "external/reshade/include/reshade_api_resource.hpp",
+    "external/reshade/include/reshade_api.hpp",
+    "external/reshade/include/reshade_events.hpp",
+    "external/reshade/include/reshade_overlay.hpp",
+    "external/reshade/include/reshade.hpp",
+    "src/depth/depth_match_addon.cpp",
+    "src/depth/depth_match.hpp",
+    "src/depth/ets2_depth_route.hpp",
+    "src/depth/ets2_rain_depth.hpp",
+    "src/depth/feed_d3d11_context.h",
+    "src/depth/resolve_vs_metadata.h",
+    "src/depth/scene_r_color.h",
+    "src/depth/scene_r_depth_contract.h",
+    "src/depth/scene_r_normalize.h",
+    "src/depth/scene_r_pair_abi.h",
+    "src/depth/scene_r_pair.h",
+    "src/depth/scene_r_publish_contract.h",
+    "src/dlaa/addon.cpp",
+    "src/dlaa/control_sync.cpp",
+    "src/dlaa/control_sync.h",
+    "src/dlaa/embedded_assets.cpp",
+    "src/dlaa/embedded_assets.h",
+    "src/feeder/feed_context_protection.h",
+    "src/feeder/feed_d3d11_context.h",
+    "src/feeder/feed_driver_api.h",
+    "src/feeder/feed_post_sr_model.h",
+    "src/feeder/feed_post_sr_settings.h",
+    "src/feeder/feed_post_sr.h",
+    "src/feeder/feed_scene_r_client.h",
+    "src/feeder/feed_scene_r_pair_abi.h",
+    "src/feeder/stereo_motion_history.h",
+    "src/standalone/native_sr.cpp",
+    "src/standalone/native_sr.h",
+    "src/dlaa/producer_control.h"
+  ],
+  "defines": [
+    "ETS2_DEPTH_EMBEDDED",
+    "DEPTH_MATCH_MAX_CANDIDATES=4",
+    "WIN32_LEAN_AND_MEAN",
+    "NOMINMAX",
+    "ETS2_GEOMETRY_TAA_PROBE"
+  ],
+  "build_allowlist": [
+    "build-dlaa.cmd",
+    ".gitattributes"
+  ],
+  "embedded_asset_allowlist": [
+    "shaders/ETS2_DLAA.fx",
+    "shaders/ETS2_VortStereo.fx",
+    "shaders/ETS2_VortStereo_Eye.fxh",
+    "shaders/ReShade.fxh",
+    "shaders/vort_BlueNoise.png"
+  ],
+  "translation_units": [
+    "src/dlaa/addon.cpp",
+    "src/dlaa/embedded_assets.cpp",
+    "src/standalone/native_sr.cpp",
+    "src/depth/depth_match_addon.cpp",
+    "src/dlaa/control_sync.cpp",
+    "src/dlaa/settings_overlay.cpp"
+  ],
+  "manifest_self_hash_excluded": true,
+  "documentation_allowlist": [
+    "README.md",
+    "docs/INSTALLATION.md",
+    "docs/BUILDING.md",
+    "THIRD-PARTY-NOTICES.md"
+  ],
+  "release": {
+    "version": "1.0",
+    "addon_sha256": "097eb48d6e0314739539b42a2b68b904d51f9720408f6b92eacac6a877bc7cfd",
+    "build_environment": {
+      "CL": "/DETS2_GEOMETRY_TAA_PROBE"
+    }
+  }
+}
