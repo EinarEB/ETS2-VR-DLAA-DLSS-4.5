@@ -2,7 +2,7 @@
 
 NVIDIA DLAA anti-aliasing for **Euro Truck Simulator 2 in VR**. It processes each eye at its original resolution to smooth jagged edges and reduce shimmering in the scene.
 
-The mod is one file, `ets2-dlaa.addon64`, controlled from ReShade: an **on/off checkbox** and a **model preset** selector. Snowymoon is not required. There is no separate mod installer or launcher.
+The mod is one file, `ets2-dlaa.addon64`, controlled from ReShade: an **on/off checkbox** and a **model preset** selector.
 
 **Version 1.0 download: coming soon.**
 
@@ -14,18 +14,22 @@ The mod is one file, `ets2-dlaa.addon64`, controlled from ReShade: an **on/off c
 | Rendering mode | **DLAA: native input and output resolution** |
 | Controls | ReShade effect checkbox and model preset selector |
 
-DLAA uses the DLSS reconstruction model for anti-aliasing at native resolution. This package does not lower the game's render resolution or generate additional frames. Expect an additional GPU cost; it is an image-quality option, not a promised FPS increase.
+> [!WARNING]
+> **DLAA has a heavy GPU performance cost. Spacewarp or another headset frame-generation mode is recommended for VR.** DLAA uses the DLSS reconstruction model for anti-aliasing at native resolution; this package does not lower the game's render resolution or generate additional frames itself.
 
 ## Requirements
 
 - **ETS2 VR, DirectX 11, OpenXR, SDR.** HDR is not supported. The current game build used for validation is **1.60.1.1007**. Rendering changes in later game updates may require an add-on update.
 - **Windows 11** and an **NVIDIA GeForce RTX GPU** with a current driver. Hardware performance varies; other Windows versions are not verified.
-- **[ReShade 6.8.0 with full add-on support](https://reshade.me/downloads/ReShade_Setup_6.8.0_Addon.exe)**, installed with its OpenXR option.
+- **[ReShade 6.8.0 with full add-on support](https://reshade.me/downloads/ReShade_Setup_6.8.0_Addon.exe)**, installed with **both DirectX 10/11/12 and OpenXR selected**.
 - NVIDIA's **310.9.1.0** DLSS library, obtained separately from the official download linked in the guide.
 
 For Quest headsets through Virtual Desktop, use **VDXR**. Other OpenXR runtimes have not been verified for this release.
 
 ## Install and use
+
+> [!IMPORTANT]
+> In the ReShade installer, select **DirectX 10/11/12** and tick the **OpenXR checkbox at the bottom of that same rendering API selection page**. **Both must be selected correctly or the mod will not work at all.**
 
 1. Select ETS2's **oculus VR beta branch** in Steam. Install ReShade for its executable with **DirectX 10/11/12** and **OpenXR** selected.
 2. Copy `ets2-dlaa.addon64` and the matching `nvngx_dlss.dll` into `Euro Truck Simulator 2\bin\win_x64`.
