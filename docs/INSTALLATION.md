@@ -70,7 +70,7 @@ A change resets the DLAA history. The NVIDIA driver may override a request, and 
 | Lower frame rate | DLAA adds GPU work at the full VR resolution. Compare presets and reduce the headset's render resolution if needed. This package does not offer a reduced-resolution DLSS upscaling mode. |
 | Effect temporarily disappears after a menu, loading screen or restart | The add-on waits for fresh matching inputs from both eyes and rebuilds its history. If it does not return during driving, collect the logs. |
 
-For an issue, include **`ets2-dlaa.log`** and the relevant **ReShade log** from `bin\win_x64`. `depth-match.log` is useful if the add-on cannot find the current scene inputs. Provide the game version, GPU/driver, headset and OpenXR runtime, selected preset, and any other graphics injectors. Check logs for personal file paths before posting them publicly.
+For an issue, include **`ets2-dlaa.log`** from the folder containing the add-on and the relevant **ReShade log** from `bin\win_x64`. `depth-match.log`, also beside the add-on, is useful if the current scene inputs are unavailable. Provide the game version, GPU/driver, headset and OpenXR runtime, selected preset, and any other graphics injectors. Check logs for personal file paths before posting them publicly.
 
 ## Updating
 
@@ -78,7 +78,7 @@ Close ETS2 and replace `ets2-dlaa.addon64` with the newer release. Keep your ReS
 
 ## Removing
 
-1. Close ETS2 and remove `ets2-dlaa.addon64` from `bin\win_x64`.
+1. Close ETS2 and remove `ets2-dlaa.addon64` from its installation folder: normally `bin\win_x64`, or your custom ReShade add-on folder.
 2. Delete `%LOCALAPPDATA%\ETS2-DLAA` to remove the add-on's cached shaders. This prevents ReShade from continuing to load those effects after the add-on is gone.
 3. Remove only the `ETS2-DLAA\assets\...` entries from ReShade's effect/texture search paths. Leave other paths and shader folders intact.
 4. Remove `nvngx_dlss.dll` only if no other mod uses it.
